@@ -1,0 +1,5 @@
+<div id="footer"><div class="inner">
+  <a href="#">Locations</a><a href="#">Contact Us</a><a href="#">Help &amp; Support</a><a href="#">Browser Requirements</a><a href="#">Accessible Banking</a><a href="#">Privacy</a><a href="#">Security</a><a href="#">Online Banking Service Agreement</a><a href="#">Site Map</a><br />
+  Bank of America, N.A. Member FDIC. Equal Housing Lender &copy; 2026 Bank of America Corporation. All rights reserved.<br />
+  <span style="color:#999">OLB-XFR 4.7.12 &middot; node olbweb01a &middot; <%= new java.text.SimpleDateFormat("MM/dd/yyyy hh:mm:ss a z").format(new java.util.Date()) %></span>
+</div></div>
