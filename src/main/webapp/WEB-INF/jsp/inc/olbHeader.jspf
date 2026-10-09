@@ -1,0 +1,25 @@
+<%-- Authenticated Online Banking header (template OLB-HDR-2) --%>
+<%@ page import="com.bankofamerica.olb.model.Customer" %>
+<% Customer hdrCust = (Customer) session.getAttribute("olb.customer"); %>
+<div id="olbtop">Bank of America, N.A. Member FDIC. Equal Housing Lender</div>
+<div id="olbutil"><div class="inner"><table width="100%"><tr>
+  <td align="left"><a href="#" style="padding-left:0">Personal</a><a href="#">Wealth Management</a><a href="#">Business</a><a href="#">Corporations &amp; Institutions</a></td>
+  <td align="right"><a href="#">Security</a><a href="#">About Us</a><a href="#">En espa&ntilde;ol</a><a href="#">Contact Us</a><a href="#" style="padding-right:0">Help</a></td>
+</tr></table></div></div>
+<div id="olbbar"><div class="inner"><table width="100%"><tr>
+  <td align="left" width="330"><a class="logo" href="<%=request.getContextPath()%>/secure/transfer.do"><img src="<%=request.getContextPath()%>/images/flag.png" alt="" width="44" height="27" style="margin:0 8px 0 0" />BANK OF AMERICA</a></td>
+  <td align="left" class="pnav">
+    <div><a href="#">Checking</a><a href="#">Savings &amp; CDs</a><a href="#">Credit Cards</a><a href="#">Home Loans</a><a href="#">Auto Loans</a></div>
+    <div><a href="#">Merrill Investing</a><a href="#">Better Money Habits&reg;</a></div>
+  </td>
+  <td align="right" nowrap="nowrap">
+    <a href="#" class="pill pill-search"><img src="<%=request.getContextPath()%>/images/search.png" alt="" width="20" height="20" />Search</a>
+    <% if (hdrCust != null) { %>
+      <span class="welcome">Welcome, <%= hdrCust.getFirstName() %></span>
+      <a href="<%=request.getContextPath()%>/logout.do" class="pill pill-fill">Log out</a>
+    <% } else { %>
+      <a href="<%=request.getContextPath()%>/index.jsp" class="pill pill-fill">Log in</a>
+      <a href="#" class="pill pill-line">Enroll</a>
+    <% } %>
+  </td>
+</tr></table></div></div>

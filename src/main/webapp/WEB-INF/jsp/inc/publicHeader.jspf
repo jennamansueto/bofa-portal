@@ -1,0 +1,19 @@
+<%-- Public (unauthenticated) site header.  Shared with bankofamerica.com marketing templates (CMS export 2012-06). --%>
+<div id="fdicbar"><span class="deposits">Bank of America deposit products:</span><img src="<%=request.getContextPath()%>/images/fdic.png" alt="FDIC" width="60" height="20" /><b>FDIC-Insured - Backed by the full faith and credit of the U.S. Government</b></div>
+<div id="utilnav"><div class="inner"><table width="100%"><tr>
+  <td align="left"><a href="#" class="sel" style="padding-left:0">Personal</a><a href="#">Wealth Management</a><a href="#">Business</a><a href="#">Corporations &amp; Institutions</a></td>
+  <td align="right" class="util"><a href="#">Security</a><a href="#">About Us</a><span class="sep">|</span><a href="#"><img src="<%=request.getContextPath()%>/images/globe.png" alt="" width="22" height="22" />En espa&ntilde;ol</a><span class="sep">|</span><a href="#">Contact Us</a><span class="sep">|</span><a href="#" style="padding-right:0">Help</a></td>
+</tr></table></div></div>
+<div id="logorow"><div class="inner"><table width="100%"><tr>
+  <td align="left"><a class="logo" href="<%=request.getContextPath()%>/index.jsp">BANK OF AMERICA <img src="<%=request.getContextPath()%>/images/flag.png" alt="" width="56" height="34" /></a></td>
+  <td align="right"><form action="#" onsubmit="return false;" style="margin:0"><table id="searchbox"><tr><td><input type="text" name="q" value="" placeholder="Search" /></td><td><button type="submit"><img src="<%=request.getContextPath()%>/images/search.png" alt="Search" width="20" height="20" /></button></td></tr></table></form></td>
+</tr></table></div></div>
+<div id="prodnav"><div class="inner">
+  <a href="#">Checking<img src="<%=request.getContextPath()%>/images/chevron.png" alt="" width="12" height="8" /></a>
+  <a href="#">Savings &amp; CDs<img src="<%=request.getContextPath()%>/images/chevron.png" alt="" width="12" height="8" /></a>
+  <a href="#">Credit Cards<img src="<%=request.getContextPath()%>/images/chevron.png" alt="" width="12" height="8" /></a>
+  <a href="#">Home Loans<img src="<%=request.getContextPath()%>/images/chevron.png" alt="" width="12" height="8" /></a>
+  <a href="#">Auto Loans<img src="<%=request.getContextPath()%>/images/chevron.png" alt="" width="12" height="8" /></a>
+  <a href="#">Merrill Investing<img src="<%=request.getContextPath()%>/images/chevron.png" alt="" width="12" height="8" /></a>
+  <a href="#">Better Money Habits&reg;<img src="<%=request.getContextPath()%>/images/chevron.png" alt="" width="12" height="8" /></a>
+</div></div>

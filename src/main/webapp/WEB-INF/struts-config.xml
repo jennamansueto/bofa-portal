@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+
+  <form-beans>
+    <form-bean name="loginForm" type="com.bankofamerica.olb.form.LoginForm"/>
+    <form-bean name="transferForm" type="com.bankofamerica.olb.form.TransferForm"/>
+  </form-beans>
+
+  <global-exceptions>
+    <exception key="error.system" type="java.lang.Exception" path="/WEB-INF/jsp/error.jsp"/>
+  </global-exceptions>
+
+  <global-forwards>
+    <forward name="login" path="/index.jsp" redirect="true"/>
+    <forward name="home" path="/secure/transfer.do" redirect="true"/>
+  </global-forwards>
+
+  <action-mappings>
+
+    <action path="/login"
+            type="com.bankofamerica.olb.action.LoginAction"
+            name="loginForm" scope="request" validate="false"
+            input="/index.jsp">
+      <forward name="success" path="/secure/transfer.do" redirect="true"/>
+      <forward name="failure" path="/index.jsp"/>
+    </action>
+
+    <action path="/logout" type="com.bankofamerica.olb.action.LogoutAction">
+      <forward name="success" path="/index.jsp" redirect="true"/>
+    </action>
+
+    <action path="/secure/transfer"
+            type="com.bankofamerica.olb.action.TransferViewAction"
+            name="transferForm" scope="session" validate="false">
+      <forward name="success" path="/WEB-INF/jsp/transfer.jsp"/>
+    </action>
+
+    <action path="/secure/transferSubmit"
+            type="com.bankofamerica.olb.action.TransferSubmitAction"
+            name="transferForm" scope="session" validate="false"
+            input="/secure/transfer.do">
+      <forward name="success" path="/secure/transferConfirm.do" redirect="true"/>
+      <forward name="failure" path="/WEB-INF/jsp/transfer.jsp"/>
+    </action>
+
+    <action path="/secure/transferConfirm"
+            type="com.bankofamerica.olb.action.TransferConfirmAction">
+      <forward name="success" path="/WEB-INF/jsp/confirm.jsp"/>
+    </action>
+
+    <action path="/secure/quote"
+            type="com.bankofamerica.olb.action.TransferQuoteAction"
+            name="transferForm" scope="request" validate="false"/>
+
+  </action-mappings>
+
+  <controller processorClass="org.apache.struts.action.RequestProcessor" nocache="true"/>
+
+  <message-resources parameter="ApplicationResources" null="false"/>
+
+</struts-config>
